@@ -1,65 +1,33 @@
+This project uses the wifijammer.py script from 5 years ago as a template for something newer, more stable and robust, and using AI-assisted coding to correct and improve upon the original in many ways. 
+The newer wifijammer.py project has several goals in mind:
+1) To produce a simpler, updated Python script for automating the process of deauth-ing users of the 2.4Gz Wifi spectrum, across all channels, with greater interactivity and options to better suit the user.
+2) Add a fun, interactive menu interface!
+3) Make the code simpler, possibly shorter overall, and easier to read than Hash's original.
+4) Utilize various LLMs that specialize in logic and coding to assist and teach how this program works as a Proof-Of-Concept, refine the project, and help debug and improve upon the code along the way.
+
+
 # wifijammer
 Disconnect Nearby Access Points and Stations by forging and Transmitting Deauthentication Frames. Built on top of scapy and utilizes channel hopping and forging frames from a single interface. Works with **python 3**.
 
-## Installation:
-Install Scapy: 
-```
-$ pip3 install scapy==2.4.3
-```
-Clone the Repo and check manual: 
-```
-$ git clone https://github.com/hash3liZer/wifijammer.git
-$ cd wifijammer/
-$ python3 wifijammer.py --help
-```
 
 ## Usage:
 ```
 python3 [scriptname] [argument...]
-python3 wifijammer.py --help
+python3 wifijammer-ng.py --help
 ```
-
-### Arguments
+## Installation:
+Install Scapy: 
 ```
-Args                 Description                       Default
--h, --help           Throwback this help manaul        False
--i, --interface      Monitor Mode Interface to use
-                     for scanning & deauthentication   None
--c, --channel        Channel to put monitor interface
-                     on                                All
--a, --accesspoints   Comma-seperated list of access-
-                     points to target                  All
--s, --stations       Comma-seperated list of stations
-                     to target                         All
--f, --filters        Comma-seperated list of Mac-
-                     addresses to skip target          None
--p, --packets        Number of deauthentication
-                     packets to send per turn.         25
--d, --delay          Delay b/w transmission of pkts    0.1s
--r, --reset          To refresh the target list after 
-                     the list has reached a specific
-                     number, like --reset 5            None
-    --code           (Int) Deauthentication Code
-                     to send with packets               7
-    --world          Scan for channels from 1-14,
-                     default is 1-11                   False
-    --aggressive     Run in Aggressive Mode. Send 
-                     Continuous frames to Broadcast
-                     Doesn't work when hoppping        False
-    --no-broadcast   Don't send deauthentication 
-                     packets to broadcast address      False
-    --verbose        Print device manufacturing
-                     details                           False
+$ pip3 install scapy
 ```
-### Example
-Disconnecting AccessPoints from their stations on channel 6:
+## Usage:
 ```
-$ python3 wifijammer.py --interface wlan1mon --channel 6 --aggressive
+python3 [scriptname] [argument...]
+python3 wifijammer-ng.py --help
 ```
 
 ### Disclaimer
 This tool is only intended for testing purposes and should be used where there is allowance of having de-authentication tests. The user should have prior consent for testing against the target. The author will not be held responsible regarding any case of misuse. 
 
 ### Author
-Twitter: <a href="//twitter.com/hash3liZer">hash3liZer</a><br>
-Email  : <a href="mailto:admin@shellvoide.com">admin@shellvoide.com</a>
+I'll add this later.
